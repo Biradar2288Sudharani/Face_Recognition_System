@@ -74,7 +74,6 @@ class Login:
         Button(frame, command=self.register_window, text="New User Register", font=("times new roman", 10, "bold"), borderwidth=0, fg="white", bg="black", activeforeground="white", activebackground="red").place(x=10, y=340, width=160)
         Button(frame, command=self.forgot_password, text="Forget Password", font=("times new roman", 10, "bold"), borderwidth=0, fg="white", bg="black", activeforeground="white", activebackground="red").place(x=10, y=360, width=160)
         
-        
         self.root.bind('<Return>', self.login_with_event)
         
     def toggle_password_visibility(self):

@@ -17,7 +17,7 @@ class Face_Recognition:
         title_lbl.place(x=0, y=0, width=1366, height=50)
 
         # Background Image
-        img_right = Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\fr2.png")
+        img_right = Image.open(r"C:college_images\fr2.png")
         img_right = img_right.resize((1366, 710))
         self.photoimage_right = ImageTk.PhotoImage(img_right)
         f_lbl = Label(self.root, image=self.photoimage_right)

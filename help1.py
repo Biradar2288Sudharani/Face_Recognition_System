@@ -16,7 +16,7 @@ class Help:
         title_lbl.place(x=0,y=0,width=1366,height=55)
         
         # Top Left Image Creating
-        top_left_img=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\hd.png")
+        top_left_img=Image.open(r"C:college_images\hd.png")
         top_left_img=top_left_img.resize((683,325))
         self.photoimage_top_left=ImageTk.PhotoImage(top_left_img)
 
@@ -24,7 +24,7 @@ class Help:
         f_lbl.place(x=0,y=55,width=683,height=325)
 
         # Call logo inserted into top left image
-        call_logo_img=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\c.png")
+        call_logo_img=Image.open(r"C:college_images\c.png")
         call_logo_img=call_logo_img.resize((40,40))
         self.photoimage_call_logo=ImageTk.PhotoImage(call_logo_img)
 
@@ -39,7 +39,7 @@ class Help:
         phone_num.place(x=300,y=215,width=150,height=25)
 
         # Top Right Image Creating
-        top_right_img=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\hd.png")
+        top_right_img=Image.open(r"C:college_images\hd.png")
         top_right_img=top_right_img.resize((683,325))
         self.photoimage_top_right=ImageTk.PhotoImage(top_right_img)
 
@@ -47,7 +47,7 @@ class Help:
         f_lbl.place(x=683,y=55,width=683,height=325)
 
         # Linkdin logo inserted into top right image
-        linkdin_logo_img=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\l.png")
+        linkdin_logo_img=Image.open(r"C:college_images\l.png")
         linkdin_logo_img=linkdin_logo_img.resize((40,40))
         self.photoimage_linkdin_logo=ImageTk.PhotoImage(linkdin_logo_img)
 
@@ -65,7 +65,7 @@ class Help:
         linkdin_id.place(x=900,y=225,width=300,height=25)
 
         # Bottom Right Image Creating
-        bottom_left_img=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\hd.png")
+        bottom_left_img=Image.open(r"C:college_images\hd.png")
         bottom_left_img=bottom_left_img.resize((683,325))
         self.photoimage_bottom_left=ImageTk.PhotoImage(bottom_left_img)
 
@@ -73,7 +73,7 @@ class Help:
         f_lbl.place(x=0,y=380,width=683,height=325)
 
         # GitHub logo inserted into bottom right image
-        github_logo_img=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\g.png")
+        github_logo_img=Image.open(r"C:college_images\g.png")
         github_logo_img=github_logo_img.resize((50,50))
         self.photoimage_github_logo=ImageTk.PhotoImage(github_logo_img)
 
@@ -88,7 +88,7 @@ class Help:
         github_id.place(x=240,y=540,width=270,height=25)
 
         # Bottom Right Image Creating
-        bottom_right_img=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\hd.png")
+        bottom_right_img=Image.open(r"C:college_images\hd.png")
         bottom_right_img=bottom_right_img.resize((683,325))
         self.photoimage_bottom_right=ImageTk.PhotoImage(bottom_right_img)
 
@@ -96,7 +96,7 @@ class Help:
         f_lbl.place(x=683,y=380,width=683,height=325)
 
         # Email logo inserted into bottom right image
-        email_logo_img=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\e2.png")
+        email_logo_img=Image.open(r"C:college_images\e2.png")
         email_logo_img=email_logo_img.resize((40,40))
         self.photoimage_email_logo=ImageTk.PhotoImage(email_logo_img)
 

@@ -22,7 +22,7 @@ class F_R_S:
         self.root.wm_iconbitmap("face.ico")
  
         # Image One
-        img=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\h.png")
+        img=Image.open(r"C:college_images\h.png")
         img=img.resize((455,110))
         self.photoimage=ImageTk.PhotoImage(img)
 
@@ -30,7 +30,7 @@ class F_R_S:
         f_lbl.place(x=0,y=0,width=455,height=110)
         
         # Image Two
-        img1=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\h1.png")
+        img1=Image.open(r"C:college_images\h1.png")
         img1=img1.resize((455,110))
         self.photoimage1=ImageTk.PhotoImage(img1)
 
@@ -38,7 +38,7 @@ class F_R_S:
         f_lbl.place(x=455,y=0,width=455,height=110)
         
         # Image Three
-        img2=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\image2.png")
+        img2=Image.open(r"C:college_images\image2.png")
         img2=img2.resize((457,110))
         self.photoimage2=ImageTk.PhotoImage(img2)
 
@@ -46,7 +46,7 @@ class F_R_S:
         f_lbl.place(x=910,y=0,width=457,height=110)
 
         # Background Image
-        img3=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\bg2.png")
+        img3=Image.open(r"C:college_images\bg2.png")
         img3=img3.resize((1366,768))
         self.photoimage3=ImageTk.PhotoImage(img3)
 
@@ -75,7 +75,7 @@ class F_R_S:
         time()
 
         # Student Details Button
-        img4=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\sd.png")
+        img4=Image.open(r"C:college_images\sd.png")
         img4=img4.resize((200,200))
         self.photoimage4=ImageTk.PhotoImage(img4)
 
@@ -85,7 +85,7 @@ class F_R_S:
         b1_lbl.place(x=130,y=235,width=200,height=40)
 
         # Detect Button (FACE DETECTOR)
-        img5=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\fr.png")
+        img5=Image.open(r"C:college_images\fr.png")
         img5=img5.resize((200,200))
         self.photoimage5=ImageTk.PhotoImage(img5)
 
@@ -96,7 +96,7 @@ class F_R_S:
         b1_lbl.place(x=430,y=231,width=200,height=40)
 
         # Attendance Button (ATTENDANCE)
-        img6=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\atten.png")
+        img6=Image.open(r"C:college_images\atten.png")
         img6=img6.resize((200,200))
         self.photoimage6=ImageTk.PhotoImage(img6)
 
@@ -107,7 +107,7 @@ class F_R_S:
         b1_lbl.place(x=730,y=230,width=200,height=40)
 
         # Help Button (HELP DESK)
-        img7=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\help_desk.png")
+        img7=Image.open(r"C:college_images\help_desk.png")
         img7=img7.resize((200,200))
         self.photoimage7=ImageTk.PhotoImage(img7)
 
@@ -118,7 +118,7 @@ class F_R_S:
         b1_lbl.place(x=1030,y=230,width=200,height=40)
 
         # Train Data Button 
-        img8=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\train.png")
+        img8=Image.open(r"C:college_images\train.png")
         img8=img8.resize((200,200))
         self.photoimage8=ImageTk.PhotoImage(img8)
 
@@ -129,7 +129,7 @@ class F_R_S:
         b1_lbl.place(x=130,y=490,width=200,height=40)
 
         # Photos Button 
-        img9=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\photos.png")
+        img9=Image.open(r"C:college_images\photos.png")
         img9=img9.resize((200,200))
         self.photoimage9=ImageTk.PhotoImage(img9)
 
@@ -140,7 +140,7 @@ class F_R_S:
         b1_lbl.place(x=430,y=490,width=200,height=40)
 
         # Developer Button 
-        img10=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\d.png")
+        img10=Image.open(r"C:college_images\d.png")
         img10=img10.resize((200,200))
         self.photoimage10=ImageTk.PhotoImage(img10)
 
@@ -151,7 +151,7 @@ class F_R_S:
         b1_lbl.place(x=730,y=490,width=200,height=40)
 
         # Exit Button 
-        img11=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\exit.png")
+        img11=Image.open(r"C:college_images\exit.png")
         img11=img11.resize((200,200))
         self.photoimage11=ImageTk.PhotoImage(img11)
 

@@ -23,7 +23,7 @@ class Register:
         self.var_conf_pas = StringVar()
         
         # ************* Background Image ***************
-        img = Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\bg3.png")
+        img = Image.open(r"C:college_images\bg3.png")
         img = img.resize((1366, 780))
         self.photoimage = ImageTk.PhotoImage(img)
 
@@ -92,7 +92,7 @@ class Register:
         checkbtn.place(x=30, y=400)
 
         # ********* Register Button *************
-        img1=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\register.png")
+        img1=Image.open(r"C:college_images\register.png")
         img1=img1.resize((120,80))
         self.photoimage1=ImageTk.PhotoImage(img1)
         b1=Button(frame,image=self.photoimage1,command=self.register_data,borderwidth=0,cursor="hand2")
@@ -100,7 +100,7 @@ class Register:
         
 
         # ********* Login Button *************
-        img2=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\login.png")
+        img2=Image.open(r"C:college_images\login.png")
         img2=img2.resize((120,80))
         self.photoimage2=ImageTk.PhotoImage(img2)
         b1=Button(frame,image=self.photoimage2,borderwidth=0,cursor="hand2")

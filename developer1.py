@@ -16,7 +16,7 @@ class Developer:
         title_lbl.place(x=0,y=0,width=1366,height=55)
         
         # Background Image Creating
-        img_bg=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\d.png")
+        img_bg=Image.open(r"C:college_images\d.png")
         img_bg=img_bg.resize((1366,730))
         self.photoimage_bg=ImageTk.PhotoImage(img_bg)
 
@@ -27,7 +27,7 @@ class Developer:
         main_frame=Frame(f_lbl,bd=2,bg="black")
         main_frame.place(x=890,y=0,width=475,height=648)
 
-        img_top=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\sudha.jpg")
+        img_top=Image.open(r"C:college_images\sudha.jpg")
         img_top=img_top.resize((160,200))
         self.photoimage_top=ImageTk.PhotoImage(img_top)
 
@@ -53,7 +53,7 @@ class Developer:
         dev_label=Label(main_frame,text="Computer Science",font=("times new roman",17,"bold"),fg="white",bg="black")
         dev_label.place(x=180,y=160)
 
-        img1=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\d2.png")
+        img1=Image.open(r"C:college_images\d2.png")
         img1=img1.resize((500,690))
         self.photoimage1=ImageTk.PhotoImage(img1)
 

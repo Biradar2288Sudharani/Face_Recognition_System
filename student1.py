@@ -37,7 +37,7 @@ class Student:
         self.var_search=StringVar()
         
         # Image One
-        img=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\s1.png")
+        img=Image.open(r"C:college_images\s1.png")
         img=img.resize((455,120))
         self.photoimage=ImageTk.PhotoImage(img)
 
@@ -45,7 +45,7 @@ class Student:
         f_lbl.place(x=0,y=0,width=455,height=120)
         
         # Image Two
-        img1=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\s2.png")
+        img1=Image.open(r"C:college_images\s2.png")
         img1=img1.resize((455,120))
         self.photoimage1=ImageTk.PhotoImage(img1)
 
@@ -53,7 +53,7 @@ class Student:
         f_lbl.place(x=455,y=0,width=455,height=120)
         
         # Image Three
-        img2=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\s4.png")
+        img2=Image.open(r"C:college_images\s4.png")
         img2=img2.resize((455,120))
         self.photoimage2=ImageTk.PhotoImage(img2)
 
@@ -61,7 +61,7 @@ class Student:
         f_lbl.place(x=910,y=0,width=455,height=120)
 
         # Background Image
-        img3=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\bg3.png")
+        img3=Image.open(r"C:college_images\bg3.png")
         img3=img3.resize((1366,768))
         self.photoimage3=ImageTk.PhotoImage(img3)
 
@@ -82,7 +82,7 @@ class Student:
         Left_Frame.place(x=0,y=0,width=682,height=550)
 
         # Left Image 
-        img_left=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\left_image.png")
+        img_left=Image.open(r"C:college_images\left_image.png")
         img_left=img_left.resize((678,100))
         self.photoimage_left=ImageTk.PhotoImage(img_left)
 
@@ -266,7 +266,7 @@ class Student:
         Right_Frame.place(x=686,y=0,width=675,height=540)
 
         # Right Image
-        img_right=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\bg7.png")
+        img_right=Image.open(r"C:college_images\bg7.png")
         img_right=img_right.resize((683,95))
         self.photoimage_right=ImageTk.PhotoImage(img_right)
 
@@ -619,7 +619,7 @@ class Student:
                         img_id+=1
                         face=cv2.resize(face_cropped(my_frame),(450,450))
                         face=cv2.cvtColor(face,cv2.COLOR_BGR2GRAY)
-                        file_name_path=r"C:\Users\lenovo\Desktop\Face_Recognisation_System\data\."+str(id)+"."+str(img_id)+".jpg"
+                        file_name_path=r"C:data\."+str(id)+"."+str(img_id)+".jpg"
                         cv2.imwrite(file_name_path,face)
                         cv2.putText(face,str(img_id),(50,50),cv2.FONT_HERSHEY_COMPLEX,2,(0,255,0),2)
                         cv2.imshow("Cropped Face",face)

@@ -22,7 +22,7 @@ class Login:
         self.root.wm_iconbitmap("face.ico")
 
         # Background Image
-        img = Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\home_bg.png")
+        img = Image.open(r"C:college_images\home_bg.png")
         img = img.resize((1366, 780))
         self.photoimage = ImageTk.PhotoImage(img)
         f_lbl = Label(self.root, image=self.photoimage)
@@ -32,7 +32,7 @@ class Login:
         frame = Frame(self.root, bg="black")
         frame.place(x=480, y=150, width=300, height=400)
 
-        img1 = Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\logo.png")
+        img1 = Image.open(r"C:college_images\logo.png")
         img1 = img1.resize((100, 100))
         self.photoimage1 = ImageTk.PhotoImage(img1)
         f_lbl = Label(self.root, image=self.photoimage1)
@@ -59,12 +59,12 @@ class Login:
         show_pass_check.place(x=30, y=270)
 
         # Icons for username and password
-        img2 = Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\username.png")
+        img2 = Image.open(r"C:college_images\username.png")
         img2 = img2.resize((25, 25))
         self.photoimage2 = ImageTk.PhotoImage(img2)
         Label(self.root, image=self.photoimage2).place(x=510, y=290, width=25, height=25)
 
-        img3 = Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\pass.png")
+        img3 = Image.open(r"C:college_images\pass.png")
         img3 = img3.resize((25, 25))
         self.photoimage3 = ImageTk.PhotoImage(img3)
         Label(self.root, image=self.photoimage3).place(x=510, y=360, width=25, height=25)
@@ -195,7 +195,7 @@ class Register:
         self.var_conf_pas = StringVar()
         
         # ************* Background Image ***************
-        img = Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\bg5.png")
+        img = Image.open(r"C:college_images\bg5.png")
         img = img.resize((1366, 780))
         self.photoimage = ImageTk.PhotoImage(img)
 
@@ -203,7 +203,7 @@ class Register:
         f_lbl.place(x=0, y=0, width=1366, height=730)
         
         # ************* Left Image ***************
-        self.bg = ImageTk.PhotoImage(file=r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\home_bg2.png")
+        self.bg = ImageTk.PhotoImage(file=r"C:college_images\home_bg2.png")
         left_lbl = Label(self.root, image=self.bg)
         left_lbl.place(x=100, y=100, width=400, height=500)
 
@@ -266,7 +266,7 @@ class Register:
         checkbtn.place(x=30, y=400)
 
         # ********* Register Button *************
-        img1=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\register.png")
+        img1=Image.open(r"C:college_images\register.png")
         img1=img1.resize((120,80))
         self.photoimage1=ImageTk.PhotoImage(img1)
         b1=Button(frame,image=self.photoimage1,command=self.register_data,borderwidth=0,cursor="hand2")
@@ -274,7 +274,7 @@ class Register:
         
 
         # ********* Login Button *************
-        img2=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\login.png")
+        img2=Image.open(r"C:college_images\login.png")
         img2=img2.resize((120,80))
         self.photoimage2=ImageTk.PhotoImage(img2)
         b1=Button(frame,image=self.photoimage2,command=self.register_data,borderwidth=0,cursor="hand2")  # return_login

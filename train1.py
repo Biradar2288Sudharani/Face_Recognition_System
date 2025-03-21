@@ -21,7 +21,7 @@ class Train:
         title_lbl.place(x=0,y=0,width=1366,height=50)
         
         # Top Image Creating
-        img_top=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\train1.png")
+        img_top=Image.open(r"C:college_images\train1.png")
         img_top=img_top.resize((1366,330))
         self.photoimage_top=ImageTk.PhotoImage(img_top)
 
@@ -33,7 +33,7 @@ class Train:
         btn_lbl.place(x=0,y=370,width=1366,height=50)
 
         # Bottom Image Creating
-        img_bottom=Image.open(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\college_images\train3.png")
+        img_bottom=Image.open(r"C:college_images\train3.png")
         img_bottom=img_bottom.resize((1366,295))
         self.photoimage_bottom=ImageTk.PhotoImage(img_bottom)
 

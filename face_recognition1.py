@@ -16,6 +16,9 @@ class Face_Recognition:
         title_lbl = Label(self.root, text="Face Recognition", font=("times new roman", 35, "bold"), bg="black", fg="red")
         title_lbl.place(x=0, y=0, width=1366, height=50)
 
+        back_btn=Button(title_lbl,text="Back Button",borderwidth=0,cursor="hand2",font=("times new roman",18,"bold"),bg="blue",fg="white")  # return_login
+        back_btn.place(x=1200,y=8,width=145,height=30)
+
         # Background Image
         img_right = Image.open(r"C:college_images\fr2.png")
         img_right = img_right.resize((1366, 710))
@@ -100,7 +103,7 @@ class Face_Recognition:
                         cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 3)
                         cv2.putText(img, "Unknown Face", (x, y - 5), cv2.FONT_HERSHEY_COMPLEX, 0.8, (255, 255, 255), 3)
                 except Exception as e:
-                    print(f"Error accessing database: {e}")
+                    print(f"Error accessing database: {e}", parent=self.root)
 
         def recognize(img, clf, faceCascade):
             draw_boundary(img, faceCascade, 1.1, 10, (255, 0, 255), "Face", clf)
@@ -111,7 +114,7 @@ class Face_Recognition:
 
         # Load pre-trained recognizer model
         clf = cv2.face.LBPHFaceRecognizer_create()
-        clf.read(r"C:\Users\lenovo\Desktop\Face_Recognisation_System\classifier.xml")
+        clf.read(r"C:\\Users\\lenovo\\Desktop\\Face_Recognition_System\\classifier.xml")
 
         video_cap = cv2.VideoCapture(0)
 
@@ -125,6 +128,7 @@ class Face_Recognition:
 
         video_cap.release()
         cv2.destroyAllWindows()
+        
 
 if __name__ == "__main__":
     root = Tk()

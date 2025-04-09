@@ -71,6 +71,9 @@ class Student:
         title_lbl=Label(bg_img,text="Student Management System",font=("times new roman",33,"bold"),bg="black",fg="red")
         title_lbl.place(x=0,y=0,width=1366,height=50)
 
+        back_btn=Button(title_lbl,text="Back Button",borderwidth=0,cursor="hand2",font=("times new roman",18,"bold"),bg="blue",fg="white")  # return_login
+        back_btn.place(x=1200,y=8,width=145,height=30)
+
         main_frame=Frame(bg_img,bd=2,bg="white")
         main_frame.place(x=0,y=50,width=1366,height=560)
 
@@ -400,10 +403,13 @@ class Student:
         conn.close()    
 
     # *************** GET CURSOR *********************
-    def get_cursor(self,event=""):
-        cursor_focus=self.student_table.focus()
-        content=self.student_table.item(cursor_focus)
-        data=content["values"]
+    def get_cursor(self, event=""):
+        cursor_row = self.student_table.focus()
+        data = self.student_table.item(cursor_row, "values")
+
+        if not data:  # If data is empty, show an error and return
+            messagebox.showerror("Error", "No data found! Please select a valid record.")
+            return  
 
         self.var_dep.set(data[0]),
         self.var_course.set(data[1]),
@@ -599,7 +605,7 @@ class Student:
                 conn.close()
 
                 # ************************* Load Predifined Data On Face Frontals From opencv *****************************
-                face_classifier = cv2.CascadeClassifier(r"C:\\Users\\lenovo\\Desktop\\Face_Recognisation_System\\haarcascade_frontalface_default.xml")
+                face_classifier = cv2.CascadeClassifier(r"C:\\Users\\lenovo\\Desktop\\Face_Recognition_System\\haarcascade_frontalface_default.xml")
 
                 def face_cropped(img):
                     gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
@@ -628,7 +634,7 @@ class Student:
                         break
                 cap.release()
                 cv2.destroyAllWindows()
-                messagebox.showinfo("Result","Generating Datasets Completed !!!")
+                messagebox.showinfo("Result","Generating Datasets Completed !!!", parent=self.root)
             except Exception as es:
                 messagebox.showerror("Error",f"Due To :{str(es)}",parent=self.root)
 

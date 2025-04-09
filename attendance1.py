@@ -7,7 +7,6 @@ import os
 import csv
 from tkinter import filedialog
 
-
 class Attendance:
     def __init__(self, root):
         self.root = root
@@ -53,6 +52,9 @@ class Attendance:
         title_lbl = Label(bg_img, text="Attendance Management System",font=("times new roman", 32, "bold"), bg="black", fg="red")
         title_lbl.place(x=0, y=0, width=1366, height=48)
 
+        back_btn=Button(title_lbl,text="Back Button",borderwidth=0,cursor="hand2",font=("times new roman",18,"bold"),bg="blue",fg="white")  # return_login
+        back_btn.place(x=1200,y=8,width=145,height=30)
+
         main_frame = Frame(bg_img, bd=2, bg="white")
         main_frame.place(x=0, y=50, width=1366, height=700)
 
@@ -72,7 +74,6 @@ class Attendance:
         left_inside_frame.place(x=2, y=142, width=670, height=370)
 
         # ********* Labeled Entry ***********
-
         labels = ["AttendanceId:", "Roll Number:", "Name:", "Department:", "Time:", "Date:"]
         variables = [self.var_atten_id, self.var_atten_roll, self.var_atten_name,self.var_atten_dep, self.var_atten_time, self.var_atten_date]
 
@@ -113,14 +114,14 @@ class Attendance:
         reset_btn=Button(btn_frame,text="Reset",command=self.reset_data,width=15,font=("times new roman",13,"bold"),bg="blue",fg="white")  
         reset_btn.grid(padx=1,row=0,column=3)
 
-#========================== Right Label Frame ========================
+        #========================== Right Label Frame ========================
         # Student Details
         Right_Frame = LabelFrame(main_frame, bd=2, bg="white", relief=RIDGE, text="Attendance Details",font=("times new roman", 12, "bold"))
         Right_Frame.place(x=683, y=0, width=677, height=540)
 
         table_Frame = Frame(Right_Frame, bd=2, bg="white", relief=RIDGE)
         table_Frame.place(x=3, y=5, width=668, height=510)
-
+        
         # *********** Scroll Bar Table ***********
         scroll_x = ttk.Scrollbar(table_Frame, orient=HORIZONTAL)
         scroll_y = ttk.Scrollbar(table_Frame, orient=VERTICAL)
@@ -245,22 +246,21 @@ class Attendance:
 
 
     # ************** Get Cursor ********
-    def get_cursor(self,event=""):
-        cursor_row=self.AttendanceReportTable.focus()
-        content=self.AttendanceReportTable.item(cursor_row)
-        rows=content["values"]
-        self.var_atten_id.set(rows[0])
-        self.var_atten_roll.set(rows[1])
-        self.var_atten_name.set(rows[2])
-        self.var_atten_dep.set(rows[3])
-        self.var_atten_time.set(rows[4])
-        self.var_atten_date.set(rows[5])
-        self.var_atten_attendane.set(rows[6])
+    def get_cursor(self, event=""):
+        cursor_row = self.AttendanceReportTable.focus()  # Get the selected row
+        content = self.AttendanceReportTable.item(cursor_row)  # Get row content
+        rows = content["values"]  # Extract values
 
-        if rows and len(rows) > 0:
+        if rows and len(rows) >= 7:  # Ensure data exists and has enough columns
             self.var_atten_id.set(rows[0])
+            self.var_atten_roll.set(rows[1])
+            self.var_atten_name.set(rows[2])
+            self.var_atten_dep.set(rows[3])
+            self.var_atten_time.set(rows[4])
+            self.var_atten_date.set(rows[5])
+            self.var_atten_attendane.set(rows[6])
         else:
-            print("Warning: No rows returned from query.")
+            print("Warning: No data selected or insufficient data in row.")
 
         # ********* Reset Operation **********
     def reset_data(self):
@@ -270,7 +270,9 @@ class Attendance:
         self.var_atten_dep.set("")
         self.var_atten_time.set("")
         self.var_atten_date.set("")
-        self.var_atten_attendane.set("")         
+        self.var_atten_attendane.set("")
+
+# +++++++++++++++++++++++ Average Attendance Logic ++++++++++++++++++++++++++++++++++++++++
 
 if __name__== " __main__ ":
     root=Tk()

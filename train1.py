@@ -4,10 +4,10 @@ from PIL import Image, ImageTk
 from tkinter import messagebox
 import mysql
 import cv2
+import tkinter as tk
 import mysql.connector
 import os
 import numpy as np
-
 
 class Train:
     def __init__(self,root):
@@ -15,10 +15,13 @@ class Train:
         self.root.geometry("1366x768+0+0")
         self.root.title("Face Recognization System")
         self.root.wm_iconbitmap("face.ico")
-        
+
         # Title name given
         title_lbl=Label(self.root,text="Train Data Set",font=("times new roman",35,"bold"),bg="black",fg="red")
         title_lbl.place(x=0,y=0,width=1366,height=50)
+
+        back_btn=Button(title_lbl,text="Back Button",borderwidth=0,cursor="hand2",font=("times new roman",18,"bold"),bg="blue",fg="white")  # return_login
+        back_btn.place(x=1200,y=8,width=145,height=30)
         
         # Top Image Creating
         img_top=Image.open(r"C:college_images\train1.png")
@@ -41,7 +44,7 @@ class Train:
         f_lbl.place(x=0,y=420,width=1366,height=295)
     
     def train_classifier(self):
-        data_dir=("C:\\Users\\lenovo\\Desktop\\Face_Recognisation_System\\data")
+        data_dir=("C:\\Users\\lenovo\\Desktop\\Face_Recognition_System\\data")
         path=[os.path.join(data_dir,file) for file in os.listdir(data_dir)]
 
         faces=[]
@@ -61,12 +64,14 @@ class Train:
         # *************** Train the Classifier and Save them ******************
         clf=cv2.face.LBPHFaceRecognizer_create()
         clf.train(faces,ids)
-        clf.write("C:\\Users\\lenovo\\Desktop\\Face_Recognisation_System\\classifier.xml")
+        clf.write("C:\\Users\\lenovo\\Desktop\\Face_Recognition_System\\classifier.xml")
+        messagebox.showinfo("Result","Training Dataset Completed!!!", parent=self.root)  
         cv2.destroyAllWindows()
-        messagebox.showinfo("Result","Training Dataset Completed!!!")
-      
 
 if __name__== " __main__ ":
     root=Tk()
     obj=Train(root)
     root.mainloop()
+
+
+

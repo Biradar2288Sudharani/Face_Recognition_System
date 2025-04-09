@@ -5,13 +5,14 @@ import tkinter.messagebox
 from PIL import Image, ImageTk
 import mysql
 import os
+import tkinter as tk
 from  time import strftime
 from  datetime import datetime
 from student1 import Student
 from train1 import Train
 from face_recognition1 import Face_Recognition
 from attendance1 import Attendance
-from developer1 import Developer
+from Avg_Atten import AttendanceAnalyzer
 from help1 import Help
 
 class F_R_S:
@@ -139,15 +140,15 @@ class F_R_S:
         b1_lbl=Button(bg_img,text="Photos",cursor="hand2",command=self.open_img,font=("times new roman",23,"bold"),bg="darkblue",fg="white")
         b1_lbl.place(x=430,y=490,width=200,height=40)
 
-        # Developer Button 
-        img10=Image.open(r"C:college_images\d.png")
+        # Average Attendance Button 
+        img10=Image.open(r"C:college_images\graph1.png")
         img10=img10.resize((200,200))
         self.photoimage10=ImageTk.PhotoImage(img10)
 
-        b1=Button(bg_img,image=self.photoimage10,cursor="hand2",command=self.developer_data)
+        b1=Button(bg_img,image=self.photoimage10,cursor="hand2",command=self.check_atten)
         b1.place(x=730,y=300,width=200,height=200)
 
-        b1_lbl=Button(bg_img,text="Developer",cursor="hand2",command=self.developer_data,font=("times new roman",23,"bold"),bg="darkblue",fg="white")
+        b1_lbl=Button(bg_img,text="Average Atten",cursor="hand2",command=self.check_atten,font=("times new roman",23,"bold"),bg="darkblue",fg="white")
         b1_lbl.place(x=730,y=490,width=200,height=40)
 
         # Exit Button 
@@ -169,8 +170,7 @@ class F_R_S:
         if self.iExit>0:
             self.root.destroy()
         else:
-            return
-        
+            return        
 
     # *************Functions Buttons***************
     def student_details(self):
@@ -187,16 +187,16 @@ class F_R_S:
 
     def attnedance_data(self):
         self.new_window=Toplevel(self.root)
-        self.app=Attendance(self.new_window)   
-
-    def developer_data(self):
-        self.new_window=Toplevel(self.root)
-        self.app=Developer(self.new_window)  
+        self.app=Attendance(self.new_window) 
 
     def help_data(self):
         self.new_window=Toplevel(self.root)
         self.app=Help(self.new_window)  
 
+    def check_atten(self):
+        self.new_window = tk.Toplevel(self.root)  # Creating a new window
+        file_path = "C:\\Users\\lenovo\\Desktop\\Face_Recognition_System\\Attendance_Report\\M2.csv"  # Ensure file path is correct
+        self.app = AttendanceAnalyzer(file_path, self.new_window)
 
 if __name__== " __main__ ":
     root=Tk()

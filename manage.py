@@ -202,7 +202,7 @@ class Login:
         else:
             conn = mysql.connector.connect(host="localhost", user="root", password="Shankar2sep@", database="face_recognition", auth_plugin="mysql_native_password")
             my_cursor = conn.cursor()
-            query = "SELECT * FROM register WHERE EmailID=%s AND SecurityQ=%s AND SecurityA=%s"
+            query = "SELECT * FROM register WHERE EmailID=%s AND `SecurityQ`=%s AND `SecurityA`=%s"
             my_cursor.execute(query, (self.txtuser.get(), self.combo_security_question.get(), self.txt_security.get()))
             row = my_cursor.fetchone()
             if row is None:
@@ -215,11 +215,10 @@ class Login:
                 messagebox.showinfo("Info", "Your password has been reset, please login with new password", parent=self.root2)
                 self.root2.destroy()
 
-'''
     # ******** Login Button Functions ********
     def return_login(self):
         self.root.destroy()
-'''
+
 
 # Run the application  
 if __name__ == "__main__":
